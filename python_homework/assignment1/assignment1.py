@@ -24,22 +24,33 @@ def greet(name):
 greet("Shakera!");
 
 #Task 3
+
+# def test_calc():
+#     assert a1.calc(5,6) == 30
+#     assert a1.calc(5,6,"add") == 11
+#     assert a1.calc(20,5,"divide") == 4
+#     assert a1.calc(14,2.0,"multiply") == 28.0
+#     assert a1.calc(12.6, 4.4, "subtract") == 8.2
+#     assert a1.calc(9,5, "modulo") == 4
+#     assert a1.calc(10,0,"divide") == "You can't divide by 0!"
+#     assert a1.calc("first", "second", "multiply") == "You can't multiply those values!"
+
 print("--------------Task 3------------")
 
 def calc(a,b, operation="multiply"):
     try:     
         if operation == "add":
-            return a * b;
+            return a + b;
         elif operation == "subtract":
             return a - b;
         elif operation == "multiply":
             return a * b;
         elif operation == "divide":
-            return a / b if b != 0 else "Error:Division by zero";
+            return a / b if b != 0 else "You can't divide by zero";
         elif operation == "modulo":
             return a % b if b != 0 else "Error: Modulo by zero";
-        elif operation == "int_divide":
-            return a // b if b != 0 else "Error: You can't divide  by zero"
+        # elif operation == "int_divide":
+        #     return a // b if b != 0 else "Error: You can't divide  by zero"
         elif operation == "power":
             return a ** b
         else:
@@ -178,7 +189,7 @@ def titleize(title):
         else:
             words[i] = word.lower()
 
-        return " ".join(words)
+    return " ".join(words)
     
 print(titleize("war and peace"))
 print(titleize("a separate peace"))
