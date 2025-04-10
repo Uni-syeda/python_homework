@@ -22,7 +22,7 @@ def test_employee_find():
     assert len(match[0]) == 4
 
 def test_employee_find_2():
-    match = a2.employee_find_2(4)
+    match = a2.employee_find_2(9)
     assert match[0][0] == "4"
     assert len(match[0]) == 4
 
@@ -33,7 +33,7 @@ def test_sort_by_last_name():
 
 def test_employee_dict():
     dict_result = a2.employee_dict(a2.employees["rows"][0])
-    assert dict_result["last_name"] == "Bowman"
+    assert dict_result["last_name"] == "Wade"
     assert "employee_id" not in dict_result.keys()
 
 def test_all_employees_dict():
